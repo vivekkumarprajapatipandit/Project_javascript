@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vvi project</title>
+    <style>
+        body{
+            background-color:rgb(8, 6, 6);
+        }
+    </style>
+</head>
+<body>
+    <nav >
+        <a href="/" aria-Current = "page" class="navigate">Home</a>
+        <a target="_blank" href="https://www.youtube.com/@myproject.com" class="navigate">MyChannel</a>
+      </nav>
+<div class="wrapper">
+      <h1>Start should change background color Every second </h1>
+
+<button id = "start">Start</button>
+<button id = "stop">stop</button>
+
+</div>
+    
+</body>
+<script>
+//generate a random color
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+
+let intervalId;
+const startChangingColor = function () {
+  if (!intervalId) {
+    intervalId = setInterval(changeBgColor, 1000);
+  }
+
+  function changeBgColor() {
+    document.body.style.backgroundColor = randomColor();
+  }
+};
+const stopChangingColor = function () {
+  clearInterval(intervalId);
+  intervalId = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingColor);
+
+document.querySelector('#stop').addEventListener('click', stopChangingColor);
+
+
+</script>
+</html>

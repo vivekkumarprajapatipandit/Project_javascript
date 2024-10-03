@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our first project</title>
+  <style>
+
+.button{
+  width:100px;
+  padding:10px;
+  border: 3px solid black;
+  border-radius:5px;
+  
+}
+
+.navigate{
+  background-color:rgb(231, 73, 11);
+  color:white;
+  padding:5px; 
+  width:100px;
+  border-radius:5px;
+  border:1px solid black;
+  font-weight: bold;
+  
+}
+nav a{
+  list-style-type:none;
+  
+}
+
+  </style>
+</head>
+<body>
+  <nav >
+  <a href="/" aria-Current = "page" class="navigate">Home</a>
+  <a target="_blank" href="https://www.youtube.com/@myproject.com" class="navigate">MyChannel</a>
+</nav>
+  <div class="canvas">
+  <h1>color scheme switcher</h1>
+  <span class="button" id="grey">grey</span>
+  <span class="button" id="yellow">yellow</span>
+  <span class="button" id="blue">blue</span>
+  <span class="button" id="white">white</span>
+  <h2>
+    Try clicking on one of the colors above<span>to change the background color of this page!</span>
+  </h2>
+  </div>
+</body>
+<script src ="myproject.js"></script>
+</html>

@@ -1,0 +1,13 @@
+const promiseOne = new Promise(function(resolve,reject){
+    //Do an async called
+    //Db calls, cryptography,network
+
+    setTimeout(function(){
+        console.log('Async task is complete');
+
+    },1000)
+})
+
+promiseOne.then(fuction(){
+    console.log("Promise consumed");
+})
